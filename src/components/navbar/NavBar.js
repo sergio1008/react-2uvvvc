@@ -1,13 +1,18 @@
 import React from 'react';
 import './styles.css';
 import { BrowserRouter, Link } from 'react-router-dom';
+
 export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
       <BrowserRouter>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="#">
+            <Link className="navbar-brand" to="/">
               Navbar
             </Link>
             <button
@@ -27,13 +32,13 @@ export default class NavBar extends React.Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <Link className="nav-link" aria-current="page" to="/home">
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    about
+                    About
                   </Link>
                 </li>
               </ul>
